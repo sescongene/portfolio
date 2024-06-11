@@ -1,6 +1,14 @@
 <script lang="ts" setup>
 import { useProjectStore } from "@/stores/project";
 
+useHead({
+  title: 'Full-Stack Developer Portfolio | Laravel, Vue, Nuxt, React Expert',
+  meta: [
+    { name: 'description', content: 'Welcome to my portfolio! I am an expert in Laravel, Vue, Nuxt, and React development, specializing in building dynamic web applications with seamless performance and cutting-edge technologies. Explore my work and get in touch to transform your digital presence today!' },
+    { name: 'keywords', content: 'Laravel development, Vue.js expert, Nuxt.js developer, React development, dynamic web applications, frontend development, backend development, full-stack developer, modern web technologies, performance optimization, digital transformation, web development portfolio, custom web solutions, user interface design, interactive web apps, progressive web apps, responsive design, JavaScript frameworks, cutting-edge web development.'  }
+  ]
+})
+
 const projectStore = useProjectStore();
 projectStore.fetch();
 const projects = computed(() => projectStore.list);
